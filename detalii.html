@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>La sofia's</title>
+    <link rel="shortcut icon" type="image/png" href="./icons/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Proza+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="./style/style-landingPage.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body onload="getData();">
+    <section class="content">
+      <nav class="navbar navbar-light sticky-top navbar-collapse bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">la sofia's</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="align-self: center"
+                  href="basket.html"
+                  ><h6>Basket</h6>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-basket2"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"
+                    />
+                    <path
+                      d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"
+                    /></svg
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="align-self: center"
+                  href="produse.html"
+                  ><h6>Shop</h6>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-shop-window"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"
+                    /></svg
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="align-self: center" href="build.html"
+                  ><h6>Build your pizza</h6>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-search-heart"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"
+                    />
+                    <path
+                      d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"
+                    /></svg
+                ></a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="align-content: center"
+                  aria-current="page"
+                  href="delivery.html"
+                  ><h6>Check delivery area</h6>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    class="bi bi-pin-map-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section id="mainContainer" class="showDelivery hidden">
+      <div class="container-fluid">
+        <div class="card cardModal text-link">
+          <button
+            onclick="closeDelivery();"
+            style="
+              border: none;
+              background-color: transparent;
+              top: 0%;
+              right: 0%;
+              position: absolute;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              />
+            </svg>
+          </button>
+          <h4>Delivery Zone</h4>
+          <div class="card-body cardBodyModal">
+            <div class="delivery-area">
+              <h6>Delivery:</h6>
+              <div class="delivery-area-content text-description">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    fill="currentColor"
+                    class="bi bi-bicycle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"
+                    />
+                  </svg>
+                </div>
+                <div class="delivery-area-row">
+                  <div class="delivery-zone-1">
+                    <p>Zone 1</p>
+                    <span>|</span>
+                    <p>From 15&euro;</p>
+                  </div>
+                  <div class="delivery-zone-2">
+                    <p>up to 60 min</p>
+                  </div>
+                </div>
+                <div class="delivery-area-row">
+                  <div class="delivery-zone-1">
+                    <p>Zone 2</p>
+                    <span>|</span>
+                    <p>From 30&euro;</p>
+                  </div>
+                  <div class="delivery-zone-2">
+                    <p>up to 90 min</p>
+                  </div>
+                </div>
+                <div class="delivery-area-row">
+                  <div class="delivery-zone-1">
+                    <p>Zone 3</p>
+                    <span>|</span>
+                    <p>From 50&euro;</p>
+                  </div>
+                  <div class="delivery-zone-2">
+                    <p>up to 120 min</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-area">
+              <div class="items-payment">
+                <h6>Delivery from:</h6>
+                <p>
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-clock"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                      />
+                      <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                      /></svg></span
+                  >12:00-23:00
+                </p>
+              </div>
+              <div class="items">
+                <h6>Method of payment</h6>
+                <div class="payment">
+                  <p>
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-cash"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                        <path
+                          d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"
+                        /></svg></span
+                    >Cash
+                  </p>
+                  <p>
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-credit-card"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"
+                        />
+                        <path
+                          d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"
+                        /></svg></span
+                    >Card
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="map-area">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28764.31593976747!2d-74.04415804957864!3d40.72954725423469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25982ad0bf591%3A0xe513085a0b53805b!2sMade%20in%20New%20York%20Pizza!5e0!3m2!1shu!2sro!4v1654846267101!5m2!1shu!2sro"
+                width="100%"
+                height="50%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="mainContainer"
+      class="showProduct container-fluid"
+      style="background-color: transparent"
+    >
+      <div class="pizzaImage">
+        <img class="img-fluid" id="pizzaImage" src="" alt="pizza" />
+      </div>
+      <div class="card-group">
+        <div class="card cardDescription">
+          <div class="card-body cardBody">
+            <div class="top">
+              <h5 id="cardTitle" class="card-title"></h5>
+              <div class="top-t">
+                <div class="left-info">
+                  <p id="typeDough"></p>
+                  <p id="ingredientsInfo" class="card-text"></p>
+                </div>
+                <div class="right-info">
+                  <h6 class="titleNutrition">Nutritional value per 100g:</h6>
+                  <ul class="list-group list-group-flush nutrValue">
+                    <li
+                      class="list-group-item list-group-item-light d-flex justify-content-between align-items-center"
+                    >
+                      Calories
+                      <span class="badge bg-dark rounded-pill">285kcal</span>
+                    </li>
+                    <li
+                      class="list-group-item list-group-item-light d-flex justify-content-between align-items-center"
+                    >
+                      carbohydrates
+                      <span class="badge bg-dark rounded-pill">35.6g</span>
+                    </li>
+                    <li
+                      class="list-group-item list-group-item-light d-flex justify-content-between align-items-center"
+                    >
+                      fat<span class="badge bg-dark rounded-pill">10.4g</span>
+                    </li>
+                    <li
+                      class="list-group-item list-group-item-light d-flex justify-content-between align-items-center"
+                    >
+                      protein<span class="badge bg-dark rounded-pill"
+                        >12.2g</span
+                      >
+                    </li>
+                    <li
+                      class="list-group-item list-group-item-light d-flex justify-content-between align-items-center"
+                    >
+                      sodium<span class="badge bg-dark rounded-pill"
+                        >640mg</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="top-b">
+                <div class="size-info">
+                  <h6 style="font-size: 1.2rem">
+                    Size:<span id="sizeInfo"></span>
+                  </h6>
+                </div>
+                <div class="price-info">
+                  <h5 id="priceInfo"></h5>
+                </div>
+              </div>
+              <div class="top-btn">
+                <button
+                  onclick="showDelivery();"
+                  class="btnDelivery btn btn-light"
+                >
+                  Check delivery area
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-pin-map-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"
+                      /></svg
+                  ></span>
+                </button>
+                <div class="cart-bar">
+                  <button
+                    type="button"
+                    onclick="addToCart();"
+                    class="btnDelivery btn btn-dark"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-arrow-right-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                      />
+                    </svg>
+                  </button>
+
+                  <input
+                    class="btn btn-dark"
+                    id="countText"
+                    type="number"
+                    min="1"
+                    value="1"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="items">
+                <h6>Delivery from:</h6>
+                <p>
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-clock"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                      />
+                      <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                      /></svg></span
+                  >12:00-23:00
+                </p>
+              </div>
+              <div class="items">
+                <h6>Method of payment</h6>
+                <div class="payment">
+                  <p>
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-cash"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                        <path
+                          d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"
+                        /></svg></span
+                    >Cash
+                  </p>
+                  <p>
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-credit-card"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"
+                        />
+                        <path
+                          d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"
+                        /></svg></span
+                    >Card
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/detalii.js"></script>
+  </body>
+</html>

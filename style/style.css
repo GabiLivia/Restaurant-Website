@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100vw;
+  margin: 0 auto;
+  max-height: 100vh;
+}
+main {
+  z-index: 100 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.parallax {
+  margin: 0 auto;
+  max-height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+#topPizza,
+#bottomPizza {
+  background-size: 60%;
+  position: relative;
+  transition: 1s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+#topPizza {
+  z-index: 20;
+  overflow: hidden;
+  filter: opacity(86%);
+}
+.content {
+  background-color: #fff;
+  z-index: 200;
+  overflow: hidden;
+
+  margin: 0 auto;
+}
+.menu-wrapper {
+  overflow: hidden;
+
+  background-color: rgb(249, 228, 164);
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #000000;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.logo {
+  align-content: center;
+}
+#icon {
+  max-width: 30px;
+}
+.menu-wrapper .menu-list {
+  width: 100vw;
+  height: fit-content;
+  justify-content: space-between;
+}
+
+.menu-list {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  justify-items: space-evenly;
+
+  font-size: 1.3rem;
+}
+.menu-list-item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-item,
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: rgb(7, 7, 7);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+#loading {
+  max-width: 4rem;
+  max-height: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transform: translate(50%, -50%);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loading img {
+  max-width: 4rem;
+  max-height: 4rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+  display: none !important;
+}
+.row {
+  margin: 3rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+.displayCard:hover {
+  border: none;
+}
+.displayCard img:hover {
+  transform: scale(1.1);
+}
+#cardTitle,
+#typeDough,
+.price-bar {
+  font-family: "Proza Libre", sans-serif;
+}
+#cartText,
+.cart-bar {
+  font-family: "Cormorant Garamond", serif;
+}
+
+#photo {
+  max-width: 30rem;
+  max-height: 30rem;
+  left: 5%;
+}
+.price-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 1.3rem;
+}
+.cart-bar {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: flex-end;
+  align-content: center;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.pizzaImage {
+  max-width: 35%;
+}
+.cardDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bg-warning {
+  background-color: #f5d847 !important;
+}
+.top-t {
+  display: flex;
+  flex-direction: row;
+}
+#cardTitle {
+  font-size: 2rem;
+}
+.left-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.right-info {
+  margin: 0 auto;
+}
+.nutrValue li {
+  text-decoration: none;
+  align-content: justify;
+}
+.top-b {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: grey;
+}
+.top-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+span.badge {
+  margin-left: 0.8rem;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.bottom .items {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  color: rgb(94, 94, 94);
+}
+.payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#cardGroup {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-family: "Proza Libre", sans-serif;
+  color: rgb(79, 79, 79);
+}
+#action {
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #000;
+  background-color: transparent;
+}
+.pizzaGame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn-left,
+.btn-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.btn-outline-warning {
+  padding: 0%;
+  max-width: 6rem;
+  max-height: 6rem;
+}
+.btn-outline-warning img {
+  max-width: 15rem;
+  max-height: 15rem;
+}
+.pizza-center {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.pizzaElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hidden {
+  display: none;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#mainContainer .card-group {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  #main.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100vw;
+  }
+  .pizzaImage {
+    max-width: 16rem;
+  }
+  .cardDescription {
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
+  #cardTitle {
+    font-size: 2rem;
+  }
+  #sizeInfo,
+  #priceInfo {
+    font-size: 1.5rem;
+  }
+  .btnDelivery {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pizzaImage {
+    max-width: 15rem;
+  }
+  #mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cardDescription {
+    max-height: 100vh;
+    width: 50%;
+    border: none;
+  }
+}
+@media (max-width: 1200px) {
+  .cardDescription {
+    max-height: 100vh;
+    width: auto;
+    border: none;
+  }
+}
+
+/*Modal for delivery */
+.cardModal {
+  display: flex;
+  flex-direction: column;
+}
+.cardBodyModal {
+  display: flex;
+  flex-direction: column;
+}
+.delivery-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.delivery-area-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+  align-items: baseline;
+}
+.delivery-area-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+.delivery-zone-1 {
+  display: flex;
+  flex-direction: row;
+}
+.payment-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+  text-transform: lowercase;
+}
